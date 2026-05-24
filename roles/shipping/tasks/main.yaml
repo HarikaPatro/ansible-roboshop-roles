@@ -20,9 +20,9 @@
   community.mysql.mysql_db:
     state: import
     name: allow
-    login_host: mysql.daws87s.fun
-    login_user: root
-    login_password: Roboshop@1
+    login_host: "{{ MYSQL_HOST }}"
+    login_user: "{{ MYSQL_ROOT_USER }}"
+    login_password: "{{ MYSQL_ROOT_PASSWORD }}"
     target: "{{ item }}"
   loop:
   - /app/db/schema.sql
